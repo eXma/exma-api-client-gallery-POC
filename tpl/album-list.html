@@ -1,0 +1,19 @@
+<h1>piXma-Album-List</h1>
+
+<p>Select a galery and fave fun! Please keep in mind that this is a rough demo for the piXma api.
+    There will no support for any design issues!</p>
+<div class="row-fluid">
+    <ul class="albums thumbnails">
+        <li ng-repeat="album in albums" class="span3">
+            <a href="#/albums/{{album.id}}" class="thumbnail" style="height: 260px">
+                <div style="height:150px; background-color: #555"><img ng-src="{{album.thumbnail.thumb_url}}"></div>
+                <div class="caption">
+
+                    <h4 style="height: 2.2em;"><span ng-bind-html="album.title"></span></h4>
+
+                    <p><strong>{{album.location_name}}</strong><br>{{ album.date|fromnow }}</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
